@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"runtime"
 	"strings"
 )
 
@@ -50,8 +51,13 @@ func (c *chromeDriver) GetDriverVersion() string {
 }
 
 func (c *chromeDriver) GetLatestDriverURL() string {
+	var arch string
+	if runtime.GOARCH == "arm64" {
+		arch = "_m1"
+	}
+
 	latestVersion := GetLatestChromeDriverVersion(GetMajorVersion(c.GetChromeVersion()))
-	url := fmt.Sprintf("https://chromedriver.storage.googleapis.com/%s/chromedriver_mac64.zip", latestVersion)
+	url := fmt.Sprintf("https://chromedriver.storage.googleapis.com/%s/chromedriver_mac64%s.zip", latestVersion, arch)
 	return url
 }
 
