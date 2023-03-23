@@ -46,6 +46,19 @@ openaws-console [aws profile name]
 openaws-console --alfred
 ```
 
+## Command completion (zsh only)
+
+Put following completion file under $fpath. The filename should be `_openaws-console`.
+
+```
+#compdef openaws-console
+
+_openaws-console() {
+    _wanted profile expl 'AWS profile name' \
+      compadd $(cat ~/.aws/config | grep '\[profile ' | sed -e 's/\[profile //g;s/\]//g' | sort)
+}
+```
+
 ## Disclaimer
 
 The software is expressly provided “AS IS.” THE AUTHOR MAKES NO WARRANTY OF ANY KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF LAW, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY.
