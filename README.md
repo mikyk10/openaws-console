@@ -1,10 +1,12 @@
 # openaws-console
 
-Automation tool for AWS console login.
+Automation tool for AWS console login powered by Selenium.
+
+![output](https://user-images.githubusercontent.com/4987502/227138017-9f1a70b3-33c0-4919-98ce-6844c6c4e38c.gif)
 
 ## Overview
 
-Assuming you are working on multiple AWS management consoles simultaneously across different account IDs, you might open many browser windows for each account(s) and type lots of credentials or switch IAM role(s) back and forth. Either way, it's repetitive and cumbersome task. This tool can help you and ease your fatigue to open up AWS management console across multiple accounts without having you to enter ID/PW.
+Imagine that you're working on multiple AWS management consoles simultaneously across different account IDs, you might open many browser windows for each account(s) and type lots of credentials or switch IAM role(s) back and forth. Either way, it's repetitive and cumbersome task. This tool can help you and ease your fatigue to open up AWS management console across multiple accounts without having you to enter ID/PW.
 
 # Prerequisites
 
@@ -16,7 +18,7 @@ Assuming you are working on multiple AWS management consoles simultaneously acro
 
 ## Install
 
-Just runing the following command will get you the compiled binary under `~/go/bin/`.
+Just run the following command will get you the compiled binary under `~/go/bin/`.
 You probably need to configure PATH to execute beforehand.
 
 ```
@@ -39,10 +41,14 @@ console_password = "your_password (double quote must be eacaped by \ ) "
 
 ## Usage
 
+Type the command and run.
+
+macOS will warn you after trying to execute the binary for the first time. You'll need to allow execution in "Security and privacy Preferences".
+
 ```
 openaws-console [aws profile name]
 
-# For alfred user
+# For Alfred Workflow
 openaws-console --alfred
 ```
 
