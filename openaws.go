@@ -2,7 +2,7 @@ package main
 
 /* openaws.go
  *
- * Copyright (C) 2021 Mitsutaka Kato
+ * Copyright (C) 2023 Mitsutaka Kato
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,7 +34,7 @@ import (
 	"os"
 
 	"github.com/manifoldco/promptui"
-	"github.com/mikyk10/selenium-openaws-console/driver"
+	"github.com/mikyk10/openaws-console/driver"
 	"github.com/sclevine/agouti"
 	"github.com/spf13/cobra"
 	"gopkg.in/ini.v1"
