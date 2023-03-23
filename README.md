@@ -9,7 +9,7 @@ Assuming you are working on multiple AWS management consoles simultaneously acro
 # Prerequisites
 
 - macOS
-- Go 1.17 or above
+- Go 1.18 or above
 - Google Chrome
 - Selenium webdriver for Chrome (the tool will automatically install for you.)
 - awscli
@@ -20,7 +20,7 @@ Just runing the following command will get you the compiled binary under `~/go/b
 You probably need to configure PATH to execute beforehand.
 
 ```
-go install github.com/mikyk10/openaws-console@master
+go install github.com/mikyk10/openaws-console@latest
 ```
 
 ## Configuring
@@ -34,7 +34,7 @@ aws_access_key_id = AKIA****************
 aws_secret_access_key = ********************************
 console_account = 999999999999
 console_username = foobar
-console_password = "your_password"
+console_password = "your_password (double quote must be eacaped by \ ) "
 ```
 
 ## Usage
